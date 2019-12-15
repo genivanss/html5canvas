@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Processando o Canvas após a tag</title>
+<title>Processando o Canvas na seção HEAD</title>
+<script>
+window.onload = function() {
+// Aqui trabalharemos com o Canvas
+}
+</script>
 </head>
 <body>
 <canvas id="meu_canvas" width="200" height="200"></canvas>
 <script>
-// Aqui obteremos o contexto gráfico e trabalharemos com o
-// Canvas
+    // Referenciando o Canvas
+    var canvas = document.getElementById('meu_canvas');
+    // Obtendo o contexto gráfico
+    var context = canvas.getContext('2d');
 </script>
 </body>
 </html>
