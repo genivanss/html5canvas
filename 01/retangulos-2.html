@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Processando o Canvas na seção HEAD</title>
+<script>
+window.onload = function() {
+    // Aqui trabalharemos com o Canvas
+}
+</script>
+</head>
+<body>
+<canvas id="meu_canvas" width="800" height="800"></canvas>
+<script>
+    // Canvas e contexto
+    var canvas = document.getElementById('meu_canvas');
+    var context = canvas.getContext('2d');
+    // Preenchimento vermelho
+    context.fillStyle = 'red';
+    context.fillRect(50, 50, 100, 100);
+    // Contorno azul, com espessura de 3px
+    context.lineWidth = 3;
+    context.strokeStyle = 'blue';
+    context.strokeRect(50, 50, 100, 100);
+    
+    context.fillStyle = 'red';
+    context.fillRect(260, 50, 100, 100);
+    // Contorno azul, com espessura de 3px
+    context.lineWidth = 50;
+    context.strokeStyle = 'blue';
+    context.strokeRect(260, 50, 100, 100);
+
+    context.fillStyle = 'green';
+    context.fillRect(400, 50, 100, 100);
+
+    context.fillStyle = 'yellow';
+    context.fillRect(500, 50, 100, 100);
+</script>
+</body>
+</html>

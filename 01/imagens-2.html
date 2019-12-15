@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Processando o Canvas na seção HEAD</title>
+        <script>
+            window.onload = function() {
+                // Aqui trabalharemos com o Canvas
+            }
+        </script>
+    </head>
+    <body>
+        <!-- arquivo: imagens-2.html -->
+        <canvas id="meu_canvas" width="300" height="300"></canvas>
+        <script>
+            // Canvas e contexto
+            var canvas = document.getElementById('meu_canvas');
+            var context = canvas.getContext('2d');
+            
+            // Carregar a imagem
+            var imagem = new Image();
+            imagem.src = 'img/explosao.png';
+            imagem.onload = function() {
+                context.drawImage(
+                imagem,
+                80, 10, 60, 65, // Área de recorte (clipping)
+                20, 20, 60, 65  // Desenho no Canvas
+                );
+            }
+        </script>
+    </body>
+</html>
